@@ -1,0 +1,30 @@
+{
+    "news":[
+        {
+            "id": 1,
+            "header": "world news",
+            "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit non itaque expedita ut dolor sequi quia ipsa omnis, obcaecati impedit? Eveniet est eligendi consectetur quae perferendis, sint labore repudiandae ea eius molestiae! Commodi beatae harum ab corrupti consectetur iure debitis",
+            "category": "hot news"
+        },
+        {
+            "id": 2,
+            "header": "xavi is removed",
+            "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit non itaque expedita ut dolor sequi quia ipsa omnis, obcaecati impedit? Eveniet est eligendi consectetur quae perferendis, sint labore repudiandae ea eius molestiae! Commodi beatae harum ab corrupti consectetur iure debitis",
+            "category": "sport news"
+        },
+        {
+            "id": 3,
+            "header": "Mariys is coming here",
+            "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit non itaque expedita ut dolor sequi quia ipsa omnis, obcaecati impedit? Eveniet est eligendi consectetur quae perferendis, sint labore repudiandae ea eius molestiae! Commodi beatae harum ab corrupti consectetur iure debitis",
+            "category": "sport news"
+        },
+        {
+            "id": 4,
+            "header": "lawyer",
+            "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit non itaque expedita ut dolor sequi quia ipsa omnis, obcaecati impedit? Eveniet est eligendi consectetur quae perferendis, sint labore repudiandae ea eius molestiae! Commodi beatae harum ab corrupti consectetur iure debitis",
+            "category": "government news"
+        }
+    ],
+
+    "filters": ["all", "hot", "sport", "world"]
+}
