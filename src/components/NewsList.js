@@ -48,7 +48,7 @@ export default function NewsList() {
   const element = renderNewsList(news)
   
   return (
-    <ul>
+    <ul className=''>
       {element}
     </ul>
   )

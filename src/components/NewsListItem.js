@@ -18,7 +18,7 @@ export default function NewsListItem(props) {
 
   return (
     <li
-      className={`card flex-row shadow-lg text-white my-2 ${elementClassName}`}
+      className={`card flex-row shadow-lg text-white my-2 w-75 h-25 ${elementClassName}`}
     >
       <img
         src="https://images.unsplash.com/photo-1557992260-ec58e38d363c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
@@ -27,8 +27,8 @@ export default function NewsListItem(props) {
         style={{ objectFit: 'cover' }}
       />
       <div className="card-body">
-        <h3 className="card-title">{header}</h3>
-        <p className="card-text">{description}</p>
+        <h6 className="card-title">{header}</h6>
+        {/* <p className="card-text">{description}</p> */}
       </div>
       <span className="position-absolute top-0 start-100 translate-middle badge border rounded-pill bg-light">
         <button className="btn-close" type="button" aria-label="Close"></button>
