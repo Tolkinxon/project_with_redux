@@ -10,14 +10,16 @@
   height: 100vh;
   overflow: scroll;
   background: url('./image/image.jpg') center / cover no-repeat;
+  width: 100%;
 }
 
 .content {
   display: grid;
-  grid-template-columns: 500px 450px;
-  width: 1040px;
+  grid-template-columns: 55%  45%;
+  width: 100%;
   margin: 0px auto;
   padding-top: 50px;
+  padding: 50px;
 }
 .content__page {
   padding-left: 40px;

@@ -1,0 +1,71 @@
+{
+  "news": [
+    {
+      "id": 1,
+      "header": "xavi is removed",
+      "description": "Lorem ipsum dolor sit amet",
+      "category": "hot news"
+    },
+    {
+      "id": 2,
+      "header": "xavi is removed",
+      "description": "Lorem ipsum dolor sit amet",
+      "category": "sport news"
+    },
+    {
+      "id": 3,
+      "header": "xavi is removed",
+      "description": "Lorem ipsum dolor sit amet",
+      "category": "sport news"
+    },
+    {
+      "id": 4,
+      "header": "xavi is removed",
+      "description": "Lorem ipsum dolor sit amet",
+      "category": "sport news"
+    },
+    {
+      "id": 5,
+      "header": "Mariys is coming here",
+      "description": "Lorem ipsum dolor sit",
+      "category": "sport news"
+    },
+    {
+      "id": 6,
+      "header": "lawyer",
+      "description": "Lorem ipsum dolor sit amet",
+      "category": "government news"
+    },
+    {
+      "id": 7,
+      "header": "Mariys is coming here",
+      "description": "Lorem ipsum dolor sit",
+      "category": "sport news"
+    },
+    {
+      "id": 8,
+      "header": "lawyer",
+      "description": "Lorem ipsum dolor sit amet",
+      "category": "government news"
+    },
+    {
+      "id": 9,
+      "header": "Mariys is coming here",
+      "description": "Lorem ipsum dolor sit",
+      "category": "sport news"
+    },
+    {
+      "id": 10,
+      "header": "lawyer",
+      "description": "Lorem ipsum dolor sit amet",
+      "category": "government news"
+    }
+
+  ],
+  "filters": [
+    "all",
+    "hot",
+    "sport",
+    "world"
+  ]
+}

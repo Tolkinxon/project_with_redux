@@ -1,31 +1,46 @@
 {
-    "news":
-    [
-        {
-            "id": 1,
-            "header": "world news",
-            "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit non itaque expedita ut dolor sequi quia ipsa omnis, obcaecati impedit? Eveniet est eligendi consectetur quae perferendis, sint labore repudiandae ea eius molestiae! Commodi beatae harum ab corrupti consectetur iure debitis",
-            "category": "hot news"
-        },
-        {
-            "id": 2,
-            "header": "xavi is removed",
-            "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit non itaque expedita ut dolor sequi quia ipsa omnis, obcaecati impedit? Eveniet est eligendi consectetur quae perferendis, sint labore repudiandae ea eius molestiae! Commodi beatae harum ab corrupti consectetur iure debitis",
-            "category": "sport news"
-        },
-        {
-            "id": 3,
-            "header": "Mariys is coming here",
-            "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit non itaque expedita ut dolor sequi quia ipsa omnis, obcaecati impedit? Eveniet est eligendi consectetur quae perferendis, sint labore repudiandae ea eius molestiae! Commodi beatae harum ab corrupti consectetur iure debitis",
-            "category": "sport news"
-        },
-        {
-            "id": 4,
-            "header": "lawyer",
-            "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit non itaque expedita ut dolor sequi quia ipsa omnis, obcaecati impedit? Eveniet est eligendi consectetur quae perferendis, sint labore repudiandae ea eius molestiae! Commodi beatae harum ab corrupti consectetur iure debitis",
-            "category": "government news"
-        }
-    ],
-
-    "filters": ["all", "hot", "sport", "world"]
+  "news": [
+    {
+      "header": "hello world",
+      "description": "ahdfk",
+      "category": "hot",
+      "id": "c14b034d-f78c-4ddd-99ec-f488ce6a72bd"
+    },
+    {
+      "header": "hfdka",
+      "description": "fadsfa",
+      "category": "sport",
+      "id": "7756616a-0aac-44e6-858e-e8877a993723"
+    },
+    {
+      "header": "ghsdfjk",
+      "description": "fadshfak",
+      "category": "world",
+      "id": "fccb74da-0ed3-49a2-8424-2938d3278d34"
+    },
+    {
+      "header": "fhal",
+      "description": "fdsa",
+      "category": "hot",
+      "id": "4870cb22-c48c-4960-879f-1c1b062c3dc8"
+    },
+    {
+      "header": "fgsd",
+      "description": "afdsfa",
+      "category": "sport",
+      "id": "039df0cb-103e-4925-a6a9-85203a5d7df9"
+    },
+    {
+      "header": "dgfa",
+      "description": "dfa",
+      "category": "world",
+      "id": "5c6626a1-d156-40cd-8efb-4600a3318d14"
+    }
+  ],
+  "filters": [
+    "all",
+    "hot",
+    "sport",
+    "world"
+  ]
 }
