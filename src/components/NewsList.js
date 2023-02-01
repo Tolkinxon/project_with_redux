@@ -96,6 +96,7 @@ export default function NewsList() {
   }
 
   const element = renderNewsList(news)
+  console.log('hello');
 
   return <ul className="">{element}</ul>
 }
