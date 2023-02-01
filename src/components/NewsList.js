@@ -37,21 +37,20 @@ export default function NewsList() {
       })
       .catch(() => dispatch(newsFetchingError()))
 
-
-      dispatch(newsFetching())
-      fetch('http://localhost:3001/news')
-        .then((data) => data.json())
-        .then((data) => {
-          const inform = data.filter((item) => {
-            if (filter === 'all') {
-              return true
-            } else {
-              return item.category === filter
-            }
-          })
-          dispatch(newsFetched(inform))
+    dispatch(newsFetching())
+    fetch('http://localhost:3001/news')
+      .then((data) => data.json())
+      .then((data) => {
+        const inform = data.filter((item) => {
+          if (filter === 'all') {
+            return true
+          } else {
+            return item.category === filter
+          }
         })
-        .catch(() => dispatch(newsFetchingError()))
+        dispatch(newsFetched(inform))
+      })
+      .catch(() => dispatch(newsFetchingError()))
   }, [increment])
 
   useEffect(() => {
@@ -70,7 +69,7 @@ export default function NewsList() {
       })
       .catch(() => dispatch(newsFetchingError()))
   }, [])
-  console.log(news);
+  console.log(news)
 
   if (newsLoadingStatus === 'loading') {
     return (
@@ -96,6 +95,71 @@ export default function NewsList() {
   }
 
   const element = renderNewsList(news)
+  console.log('hello')
+  console.log('hello')
+  console.log('hello')
+  console.log('hello')
+  console.log('hello')
+  console.log('hello')
+  console.log('hello')
+  console.log('hello')
+  console.log('hello')
+  console.log('hello')
+  console.log('hello')
+  console.log('hello')
+  console.log('hello')
+  console.log('hello')
+  console.log('hello')
+  console.log('hello')
+  console.log('hello')
+  console.log('hello')
+  console.log('hello')
+  console.log('hello')
+  console.log('hello')
+  console.log('hello')
+  console.log('hello')
+  console.log('hello')
+  console.log('hello')
+  console.log('hello')
+  console.log('hello')
+  console.log('hello')
+  console.log('hello')
+  console.log('hello')
+  console.log('hello')
+  console.log('hello')
+  console.log('hello')
+  console.log('hello')
+  console.log('hello')
+  console.log('hello')
+  console.log('hello')
+  console.log('hello')
+  console.log('hello')
+  console.log('hello')
+  console.log('hello')
+  console.log('hello')
+  console.log('hello')
+  console.log('hello')
+  console.log('hello')
+  console.log('hello')
+  console.log('hello')
+  console.log('hello')
+  console.log('hello')
+  console.log('hello')
+  console.log('hello')
+  console.log('hello')
+  console.log('hello')
+  console.log('hello')
+  console.log('hello')
+  console.log('hello')
+  console.log('hello')
+  console.log('hello')
+  console.log('hello')
+  console.log('hello')
+  console.log('hello')
+  console.log('hello')
+  console.log('hello')
+  console.log('hello')
+  console.log('hello')
 
   return <ul className="">{element}</ul>
 }
