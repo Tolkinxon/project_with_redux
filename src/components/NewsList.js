@@ -70,6 +70,7 @@ export default function NewsList() {
       })
       .catch(() => dispatch(newsFetchingError()))
   }, [])
+  console.log(news);
 
   if (newsLoadingStatus === 'loading') {
     return (
