@@ -7,10 +7,16 @@
       "id": "26acfa8b-162b-4f44-b4b4-40dd8838b12b"
     },
     {
-      "header": "Raximov Tolkinjon",
-      "description": "he is from Namangan and he has got a goot mood",
+      "header": "",
+      "description": "",
+      "category": "sport",
+      "id": "9a487d6c-30d8-4a77-8a33-bf340c87948f"
+    },
+    {
+      "header": "",
+      "description": "",
       "category": "world",
-      "id": "05109b1d-feb7-429e-b198-1fd76171b0ca"
+      "id": "f9355700-bd72-48ce-9105-9ab012d2cb94"
     }
   ],
   "filters": [

@@ -4,13 +4,23 @@ import * as actions from '../redux/actions'
 import { bindActionCreators } from 'redux'
 import useHttp from '../hook/useHttp'
 import { v4 as uuidv4 } from 'uuid'
-import {  newsFetched } from '../redux/actions'
-
+import { newsFetched } from '../redux/actions'
+import { createSelector } from 'reselect'
 
 export default function NewsAddForm() {
   const dispatch = useDispatch()
-  const { header, description, category, id } = useSelector((state) => state)
-  const { headerF, descriptionF, categoryF, incr } = bindActionCreators(
+
+  const heade = createSelector(
+    (state) => state.obj.header,
+    (header) => header,
+  )
+
+  const { description, category } = useSelector((state) => {
+    return state.obj
+  })
+  const { header } = useSelector(() => {console.log('render'); return heade})
+
+  const { headerF, descriptionF, categoryF } = bindActionCreators(
     actions,
     dispatch,
   )
@@ -35,14 +45,13 @@ export default function NewsAddForm() {
     id: uuidv4(),
   }
 
-    const a = JSON.stringify(obj)
+  const a = JSON.stringify(obj)
 
-    const obj1 = [obj]
-
+  const obj1 = [obj]
 
   const post = () => {
-    request(`http://localhost:3001/news`, 'POST',a)
-    dispatch(newsFetched({info: obj1, name: ''}))
+    request(`http://localhost:3001/news`, 'POST', a)
+    dispatch(newsFetched({ info: obj1, name: '' }))
     headerF('')
     descriptionF('')
     categoryF('')

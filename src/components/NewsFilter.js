@@ -5,7 +5,7 @@ import { bindActionCreators } from 'redux'
 
 export default function NewsFilter() {
   const dispatch = useDispatch()
-  const { filt, incr } = bindActionCreators(actions, dispatch)
+  const { filt } = bindActionCreators(actions, dispatch)
 
   
   const active = (e) => {

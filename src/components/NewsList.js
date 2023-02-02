@@ -12,9 +12,9 @@ import NewsListItem from './NewsListItem'
 import { useCallback } from 'react'
 
 export default function NewsList() {
-  const { news, newsLoadingStatus, filter, news2 } = useSelector(
-    (state) => state,
-  )
+  const { news, newsLoadingStatus, news2 } = useSelector((state) => state.news)
+  const { filter } = useSelector((state) => state.obj)
+
   const dispatch = useDispatch()
   const { request } = useHttp()
 
@@ -49,7 +49,6 @@ export default function NewsList() {
       }
     })
     dispatch(news3(inform))
-    console.log('hele')
   }, [delet])
 
   useLayoutEffect(() => {
