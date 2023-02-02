@@ -7,7 +7,14 @@ import obj from './redux/reducer/obj'
 import news from './redux/reducer/news'
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
-import { combineReducers } from 'redux'
+import { combineReducers, compose, applyMiddleware } from 'redux'
+
+const stringMiddleware = () => (next) => (action) => {
+  if (typeof action === 'string') {
+    return next({ type: action })
+  }
+  return next(action)
+}
 
 const enhancer = (createStore) => (...args) => {
   const store = createStore(...args)
@@ -23,7 +30,9 @@ const enhancer = (createStore) => (...args) => {
 
 const reducer = combineReducers({ obj, news })
 
-const store = createStore(reducer, enhancer)
+// const store = createStore(reducer, enhancer)
+
+const store = createStore(reducer, applyMiddleware(stringMiddleware))
 
 ReactDOM.render(
   <StrictMode>
