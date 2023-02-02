@@ -1,14 +1,13 @@
-
 const initialState = {
   news: [],
+  news2: [],
   newsLoadingStatus: 'tolkinxon',
   filters: [],
   id: 0,
   header: '',
   description: '',
   category: '',
-  increment: 0,
-  filter: 'all'
+  filter: 'all',
 }
 
 const reducer = (state = initialState, action) => {
@@ -21,8 +20,22 @@ const reducer = (state = initialState, action) => {
     case 'NEWS_FETCHED':
       return {
         ...state,
-        news: action.payload,
+        news:
+          action.payload.name === 'delete'
+            ? [...action.payload.info]
+            : [ ...action.payload.info, ...state.news],
+        news2:
+          action.payload.name === 'delete'
+            ? [...action.payload.info]
+            : [ ...action.payload.info, ...state.news],
+
+
         newsLoadingStatus: 'tolkinxon',
+      }
+    case 'NEWS2':
+      return {
+        ...state,
+        news2: [...action.payload],
       }
     case 'NEWS_FETCHING_ERROR':
       return {
@@ -44,15 +57,11 @@ const reducer = (state = initialState, action) => {
         ...state,
         category: action.payload,
       }
-    case 'INCREMENT':
-      return {
-        ...state,
-        increment: state.increment + 1
-      }
+
     case 'FILTER':
       return {
         ...state,
-        filter: action.payload
+        filter: action.payload,
       }
     default:
       return state

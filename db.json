@@ -1,40 +1,16 @@
 {
   "news": [
     {
-      "header": "hello world",
-      "description": "ahdfk",
+      "header": "Soliyev Tolkinxon ",
+      "description": "I am from  Uzbekistan. and i like to being developer",
       "category": "hot",
-      "id": "c14b034d-f78c-4ddd-99ec-f488ce6a72bd"
+      "id": "26acfa8b-162b-4f44-b4b4-40dd8838b12b"
     },
     {
-      "header": "hfdka",
-      "description": "fadsfa",
-      "category": "sport",
-      "id": "7756616a-0aac-44e6-858e-e8877a993723"
-    },
-    {
-      "header": "ghsdfjk",
-      "description": "fadshfak",
+      "header": "Raximov Tolkinjon",
+      "description": "he is from Namangan and he has got a goot mood",
       "category": "world",
-      "id": "fccb74da-0ed3-49a2-8424-2938d3278d34"
-    },
-    {
-      "header": "fhal",
-      "description": "fdsa",
-      "category": "hot",
-      "id": "4870cb22-c48c-4960-879f-1c1b062c3dc8"
-    },
-    {
-      "header": "fgsd",
-      "description": "afdsfa",
-      "category": "sport",
-      "id": "039df0cb-103e-4925-a6a9-85203a5d7df9"
-    },
-    {
-      "header": "dgfa",
-      "description": "dfa",
-      "category": "world",
-      "id": "5c6626a1-d156-40cd-8efb-4600a3318d14"
+      "id": "05109b1d-feb7-429e-b198-1fd76171b0ca"
     }
   ],
   "filters": [

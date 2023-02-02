@@ -15,7 +15,6 @@ export default function NewsFilter() {
     )
     element.classList.add('active')
     filt(e.target.value)
-    incr()
   }
 
   return (

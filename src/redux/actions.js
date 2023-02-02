@@ -35,14 +35,11 @@ export const descriptionF = (e) => {
         payload: e
     }
 } 
-// export const sendData = () => {
-//     return {
-//         type: 'SEND_DATA'
-//     }
-// }
-export const incr = () => {
+
+export const news3 = (filt) => {
     return {
-        type: 'INCREMENT',
+        type: 'NEWS2',
+        payload: filt
     }
 }
 
@@ -52,4 +49,5 @@ export const filt = (item) => {
         payload: item
     }
 }
+
 

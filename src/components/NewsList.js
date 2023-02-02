@@ -1,75 +1,64 @@
 import { useSelector, useDispatch } from 'react-redux'
 import useHttp from '../hook/useHttp'
-import { useEffect } from 'react'
-import { newsFetching, newsFetched, newsFetchingError } from '../redux/actions'
+import { useLayoutEffect, useMemo } from 'react'
+import {
+  newsFetching,
+  newsFetched,
+  newsFetchingError,
+  news3,
+} from '../redux/actions'
 import Spinner from './Spinner'
 import NewsListItem from './NewsListItem'
-import { incr } from '../redux/actions'
 import { useCallback } from 'react'
 
 export default function NewsList() {
-  const { news, news2, newsLoadingStatus, filter } = useSelector(
+  const { news, newsLoadingStatus, filter, news2 } = useSelector(
     (state) => state,
   )
   const dispatch = useDispatch()
-  const { increment } = useSelector((state) => state)
   const { request } = useHttp()
 
-  const delet = (id) => {
-    request(`http://localhost:3001/news/${id}`, 'DELETE')
+  const delet = useCallback(
+    (id) => {
+      request(`http://localhost:3001/news/${id}`, 'DELETE')
 
-    dispatch(incr())
-  }
+      const inform = news.filter((item) => item.id !== id)
+      const infor = inform
+      dispatch(newsFetched({ info: infor, name: 'delete' }))
+    },
+    [news],
+  )
 
-  useEffect(() => {
+  useLayoutEffect(() => {
+    const inform = news.filter((item) => {
+      if (filter === 'all') {
+        return true
+      } else {
+        return item.category === filter
+      }
+    })
+    dispatch(news3(inform))
+  }, [filter])
+
+  useLayoutEffect(() => {
+    const inform = news.filter((item) => {
+      if (filter === 'all') {
+        return true
+      } else {
+        return item.category === filter
+      }
+    })
+    dispatch(news3(inform))
+    console.log('hele')
+  }, [delet])
+
+  useLayoutEffect(() => {
     dispatch(newsFetching())
     fetch('http://localhost:3001/news')
       .then((data) => data.json())
-      .then((data) => {
-        const inform = data.filter((item) => {
-          if (filter === 'all') {
-            return true
-          } else {
-            return item.category === filter
-          }
-        })
-        dispatch(newsFetched(inform))
-      })
-      .catch(() => dispatch(newsFetchingError()))
-
-    dispatch(newsFetching())
-    fetch('http://localhost:3001/news')
-      .then((data) => data.json())
-      .then((data) => {
-        const inform = data.filter((item) => {
-          if (filter === 'all') {
-            return true
-          } else {
-            return item.category === filter
-          }
-        })
-        dispatch(newsFetched(inform))
-      })
-      .catch(() => dispatch(newsFetchingError()))
-  }, [increment])
-
-  useEffect(() => {
-    dispatch(newsFetching())
-    fetch('http://localhost:3001/news')
-      .then((data) => data.json())
-      .then((data) => {
-        const inform = data.filter((item) => {
-          if (filter === 'all') {
-            return true
-          } else {
-            return item.category === filter
-          }
-        })
-        dispatch(newsFetched(inform))
-      })
+      .then((data) => dispatch(newsFetched({ info: data, name: '' })))
       .catch(() => dispatch(newsFetchingError()))
   }, [])
-  console.log(news)
 
   if (newsLoadingStatus === 'loading') {
     return (
@@ -94,72 +83,11 @@ export default function NewsList() {
     ))
   }
 
-  const element = renderNewsList(news)
-  console.log('hello')
-  console.log('hello')
-  console.log('hello')
-  console.log('hello')
-  console.log('hello')
-  console.log('hello')
-  console.log('hello')
-  console.log('hello')
-  console.log('hello')
-  console.log('hello')
-  console.log('hello')
-  console.log('hello')
-  console.log('hello')
-  console.log('hello')
-  console.log('hello')
-  console.log('hello')
-  console.log('hello')
-  console.log('hello')
-  console.log('hello')
-  console.log('hello')
-  console.log('hello')
-  console.log('hello')
-  console.log('hello')
-  console.log('hello')
-  console.log('hello')
-  console.log('hello')
-  console.log('hello')
-  console.log('hello')
-  console.log('hello')
-  console.log('hello')
-  console.log('hello')
-  console.log('hello')
-  console.log('hello')
-  console.log('hello')
-  console.log('hello')
-  console.log('hello')
-  console.log('hello')
-  console.log('hello')
-  console.log('hello')
-  console.log('hello')
-  console.log('hello')
-  console.log('hello')
-  console.log('hello')
-  console.log('hello')
-  console.log('hello')
-  console.log('hello')
-  console.log('hello')
-  console.log('hello')
-  console.log('hello')
-  console.log('hello')
-  console.log('hello')
-  console.log('hello')
-  console.log('hello')
-  console.log('hello')
-  console.log('hello')
-  console.log('hello')
-  console.log('hello')
-  console.log('hello')
-  console.log('hello')
-  console.log('hello')
-  console.log('hello')
-  console.log('hello')
-  console.log('hello')
-  console.log('hello')
-  console.log('hello')
-
-  return <ul className="">{element}</ul>
+  if (filter === 'all') {
+    const element = renderNewsList(news)
+    return <ul className="">{element} </ul>
+  } else {
+    const element = renderNewsList(news2)
+    return <ul className="">{element} </ul>
+  }
 }

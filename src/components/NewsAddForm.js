@@ -4,6 +4,8 @@ import * as actions from '../redux/actions'
 import { bindActionCreators } from 'redux'
 import useHttp from '../hook/useHttp'
 import { v4 as uuidv4 } from 'uuid'
+import {  newsFetched } from '../redux/actions'
+
 
 export default function NewsAddForm() {
   const dispatch = useDispatch()
@@ -33,12 +35,17 @@ export default function NewsAddForm() {
     id: uuidv4(),
   }
 
-  const obj1 = JSON.stringify(obj)
-  // console.log(obj1)
+    const a = JSON.stringify(obj)
 
-  const post = (obj) => {
-    request(`http://localhost:3001/news`, 'POST', obj1)
-    incr()
+    const obj1 = [obj]
+
+
+  const post = () => {
+    request(`http://localhost:3001/news`, 'POST',a)
+    dispatch(newsFetched({info: obj1, name: ''}))
+    headerF('')
+    descriptionF('')
+    categoryF('')
   }
 
   return (
@@ -55,6 +62,7 @@ export default function NewsAddForm() {
           className="form-control "
           id="name"
           placeholder="what is header of your news? "
+          value={header}
         />
       </div>
 
@@ -71,6 +79,7 @@ export default function NewsAddForm() {
           id="text"
           placeholder="what is your news about? "
           style={{ height: '120px' }}
+          value={description}
         />
       </div>
 
@@ -84,6 +93,7 @@ export default function NewsAddForm() {
           id="category"
           className="form-select"
           required
+          value={category}
         >
           <option>News about...</option>
           <option value="hot">Hot news</option>
