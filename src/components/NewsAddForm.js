@@ -10,15 +10,15 @@ import { createSelector } from 'reselect'
 export default function NewsAddForm() {
   const dispatch = useDispatch()
 
-  const heade = createSelector(
-    (state) => state.obj.header,
-    (header) => header,
-  )
+  // const heade = createSelector(
+  //   (state) => state.obj.header,
+  //   (header) => header,
+  // )
 
-  const { description, category } = useSelector((state) => {
+  const { header, description, category } = useSelector((state) => {
     return state.obj
   })
-  const { header } = useSelector(() => {console.log('render'); return heade})
+  // const { header } = useSelector(() => {console.log('render'); return heade})
 
   const { headerF, descriptionF, categoryF } = bindActionCreators(
     actions,

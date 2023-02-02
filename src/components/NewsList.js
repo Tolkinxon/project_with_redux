@@ -52,7 +52,7 @@ export default function NewsList() {
   }, [delet])
 
   useLayoutEffect(() => {
-    dispatch(newsFetching())
+    dispatch('NEWS_FETCHING')
     fetch('http://localhost:3001/news')
       .then((data) => data.json())
       .then((data) => dispatch(newsFetched({ info: data, name: '' })))
