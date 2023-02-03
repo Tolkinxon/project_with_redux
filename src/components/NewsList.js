@@ -6,6 +6,7 @@ import {
   newsFetched,
   newsFetchingError,
   news3,
+  gettingData
 } from '../redux/actions'
 import Spinner from './Spinner'
 import NewsListItem from './NewsListItem'
@@ -51,13 +52,15 @@ export default function NewsList() {
     dispatch(news3(inform))
   }, [delet])
 
+
+
+
   useLayoutEffect(() => {
-    dispatch('NEWS_FETCHING')
-    fetch('http://localhost:3001/news')
-      .then((data) => data.json())
-      .then((data) => dispatch(newsFetched({ info: data, name: '' })))
-      .catch(() => dispatch(newsFetchingError()))
+    gettingData()
   }, [])
+
+
+
 
   if (newsLoadingStatus === 'loading') {
     return (

@@ -8,6 +8,9 @@ import news from './redux/reducer/news'
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 import { combineReducers, compose, applyMiddleware } from 'redux'
+import reduxThunk from 'redux-thunk'
+
+
 
 const stringMiddleware = () => (next) => (action) => {
   if (typeof action === 'string') {
@@ -32,7 +35,7 @@ const reducer = combineReducers({ obj, news })
 
 // const store = createStore(reducer, enhancer)
 
-const store = createStore(reducer, applyMiddleware(stringMiddleware))
+const store = createStore(reducer, applyMiddleware(reduxThunk, stringMiddleware))
 
 ReactDOM.render(
   <StrictMode>
